@@ -1,0 +1,574 @@
+*,
+p,
+ol,
+ul,
+input[type=text],
+select {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+select {
+  width: auto;
+}
+.header-wrapper {
+  height: 67px;
+  line-height: 67px;
+  background: #23bfb1;
+  border-bottom: 3px solid #1db2a6;
+}
+.header-wrapper .header-content {
+  position: relative;
+  width: 980px;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 2;
+  zoom: 1;
+}
+.header-wrapper .header-content h1 {
+  margin: 0;
+  padding: 0;
+}
+.header-text {
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+.header-user {
+  position: absolute;
+  line-height: normal;
+  color: #fff;
+  right: 5px;
+  bottom: 10px;
+}
+.sidebar {
+  display: inline-block;
+  width: 18%;
+  border-radius: 2px 0 0 2px;
+  font-size: 14px;
+}
+.sidebar nav {
+  position: relative;
+  margin-bottom: 10px;
+  border: 1px solid #e7e7e7;
+  border-top-style: none;
+  background: #faf9f9;
+}
+.sidebar nav ul {
+  margin: 0;
+  list-style: none;
+}
+.sidebar nav ul li {
+  position: relative;
+  border-top: 1px solid #e7e7e7;
+  font-weight: bold;
+}
+.sidebar nav ul li h4 {
+  font-size: 16px;
+  display: inline-block;
+  padding: 16px 0 16px 24px;
+}
+.sidebar nav ul li a {
+  color: #666;
+  display: inline-block;
+  padding: 12px 0 12px 30px;
+  width: 100%;
+}
+.sidebar nav ul .active {
+  background: #23beb1;
+}
+.sidebar nav ul .active a {
+  color: #fff;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+.require {
+  color: red;
+}
+.hide {
+  display: none;
+}
+.content-wrapper {
+  width: 980px;
+  margin: 20px auto 0 auto;
+  font-size: 0;
+}
+.content-wrapper .content {
+  display: inline-block;
+  vertical-align: top;
+  width: 82%;
+  padding-left: 20px;
+  font-size: 14px;
+}
+.content-wrapper .content .ops {
+  width: 100%;
+  margin-top: 20px;
+}
+.content-wrapper .content .ops li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.content-wrapper .content .ops li input[type=text] {
+  width: 120px;
+  height: 30px;
+  line-height: 54px;
+  text-indent: 0.5em;
+}
+.content-wrapper .content .ops .checkbox {
+  margin-left: 20px;
+}
+.content-wrapper .content .ops .ops-right {
+  float: right;
+  margin: 0;
+}
+.content-wrapper .content .table-wrapper {
+  margin-top: 20px;
+}
+.content-wrapper .modal {
+  font-size: 14px;
+  color: #666;
+}
+.content-wrapper .modal .dialog-body-title {
+  width: 120px;
+  float: left;
+  text-align: right;
+  margin-bottom: 10px;
+}
+.content-wrapper .modal .dialog-body-content {
+  float: left;
+  margin-left: 20px;
+}
+.content-wrapper .modal .dialog-body-content input {
+  height: 28px;
+  padding: 2px 5px;
+}
+.content-wrapper .modal .wrong-alert {
+  color: red;
+}
+.content-wrapper .modal .dialog-promp {
+  padding: 20px 0;
+}
+.content-wrapper .modal .modal-footer .btn-primary {
+  background: #ff7000;
+}
+.hint {
+  font-size: 12px;
+  color: #999999;
+}
+.btn-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
+a {
+  color: #2bb8aa;
+}
+.btn {
+  color: white;
+  background-color: #2db3a6;
+  border-color: #0d7b71;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF2EC3B4', endColorstr='#FF2DB3A6');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi…pZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(top, #2ec3b4, #2db3a6);
+  background-image: -webkit-linear-gradient(top, #2ec3b4, #2db3a6);
+  background-image: linear-gradient(to bottom, #2ec3b4, #2db3a6);
+}
+.btn:hover {
+  color: white;
+  background-color: #2db3a6;
+}
+.btn-hot {
+  color: white;
+  background-color: #ff7200;
+  border-color: #da3f02;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFF8901', endColorstr='#FFFF7200');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi…pZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(top, #ff8901, #ff7200);
+  background-image: -webkit-linear-gradient(top, #ff8901, #ff7200);
+  background-image: linear-gradient(to bottom, #ff8901, #ff7200);
+}
+.btn-hot:hover {
+  color: white;
+  background-color: #ff7200;
+}
+.btn-normal {
+  padding-top: 6px;
+  color: #333;
+  background-color: #dedede;
+  border: 1px solid #e3e3e3;
+  border-bottom: 1px solid #aaaaaa;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF7F7F7', endColorstr='#FFDEDEDE');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi…pZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(top, #f7f7f7, #dedede);
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #dedede);
+  background-image: linear-gradient(to bottom, #f7f7f7, #dedede);
+}
+.btn-normal:hover {
+  color: #333;
+  background-color: #dedede;
+}
+.btn,
+.btn-normal,
+.btn-hot {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 7px 20px 6px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: 'SimSun', Arial;
+  letter-spacing: .1em;
+  text-align: center;
+  text-decoration: none;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  background-repeat: repeat-x;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+input[type=button].disable {
+  background-image: -webkit-linear-gradient(top, gray, gray);
+  border: 1px solid gray;
+}
+.btnWrapper {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.opt:hover {
+  color: #2db3a6;
+}
+.form-title {
+  margin-top: 10px;
+  color: #23bfb1;
+  font-size: 28px;
+  text-align: center;
+  background: #faf9f9;
+  line-height: 40px;
+}
+table td,
+table th {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+table th {
+  background: #f7f7f7;
+}
+.form-tb {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+.form-tb td {
+  vertical-align: middle;
+}
+.form-tb .name {
+  text-align: right;
+  padding-right: 10px;
+  width: 20%;
+  height: 60px;
+}
+.form-tb .vtop {
+  vertical-align: top;
+}
+.form-tb .value {
+  position: relative;
+}
+.form-tb .value input[type=text],
+.form-tb .value input[type=number] {
+  height: 30px;
+  width: 70%;
+  padding-left: 10px;
+  margin: 0;
+}
+.form-tb .value input[type=radio] {
+  margin: 0 6px 0 0;
+}
+.form-tb .value input.shorttext {
+  height: 30px;
+  width: 150px;
+}
+.form-tb .value input.smalltext {
+  height: 30px;
+  width: 100px;
+}
+.form-tb .value .form-error {
+  color: red;
+}
+.form-tb .pt10 {
+  padding-top: 10px;
+}
+.form-tb .lh {
+  line-height: 1.5;
+}
+.photo-list {
+  display: inline-block;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+.photo-list li {
+  list-style: none;
+  display: inline-block;
+}
+.photo-list li:hover {
+  border-color: #aaa;
+  cursor: pointer;
+}
+.photo-list .photo-wrapper {
+  width: 159px;
+  height: 96px;
+  text-align: center;
+  margin-right: 10px;
+}
+.photo-list .photo-wrapper .img {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background: url('../../img/bg.png');
+}
+.photo-list .photo-wrapper .img .imgitem {
+  width: 159px;
+  height: 96px;
+}
+.photo-list .photo-wrapper .img .imgitem img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.photo-list .photo-wrapper .img .imgitem .del {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 17px;
+  height: 17px;
+  background-image: url(http://cs0.meituan.net/mtdeal2/image/photo_delete-min.v2acdf60.png);
+  z-index: 1;
+}
+.photo-list .photo-wrapper .img .imgitem .mask {
+  display: none;
+}
+.photo-list .photo-wrapper .img:hover .imgitem + .mask {
+  background-color: #000;
+  background-image: url(http://cs0.meituan.net/mtdeal2/image/photo_zoom-min.vf809b6b.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  display: block;
+  z-index: 2;
+}
+.photo-list .photo-wrapper .text {
+  color: #888;
+}
+.previewWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.previewWrapper .previewContent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.previewWrapper .previewContent img {
+  max-width: none;
+}
+.previewWrapper .previewContent .close {
+  background-position: 0 0;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  line-height: 13px;
+  cursor: pointer;
+  top: -32px;
+  right: -28px;
+  background-image: url('../../img/close.png');
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+.tab {
+  overflow: hidden;
+  display: block;
+  border-bottom: 2px solid #1db2a6;
+}
+.tab li {
+  float: left;
+  margin-right: 6px;
+  font-weight: 700;
+  border: 1px solid #dedede;
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  color: #666;
+  background-color: #f5f5f5;
+}
+.tab li a {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  padding: 0 20px;
+  line-height: 34px;
+  min-width: 50px;
+  text-align: center;
+  zoom: 1;
+}
+.tab .current {
+  background-color: #23beb1;
+  border-color: #23beb1;
+}
+.tab .current a {
+  color: #fff;
+}
+.form-tb .ac-wrapper {
+  position: relative;
+  width: 70%;
+}
+.form-tb .ac-wrapper input[type=text] {
+  width: 100%;
+}
+.form-tb .ac-wrapper .ac-outer {
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow: auto;
+  line-height: 1.5;
+  background: #fff;
+  z-index: 1;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.form-tb .ac-wrapper .ac-outer .ac-ul,
+.form-tb .ac-wrapper .ac-outer .cc-ul,
+.form-tb .ac-wrapper .ac-outer .gc-ul {
+  height: 100%;
+}
+.form-tb .ac-wrapper .ac-outer li {
+  padding: 5px 0 5px 10px;
+  cursor: pointer;
+}
+.form-tb .ac-wrapper .ac-outer li:hover {
+  background-color: #2bb2aa;
+  color: #fff;
+}
+.content-wrapper .fixed {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+.content-wrapper .edit-wrapper {
+  margin: 10px 0;
+  display: block;
+  text-align: left;
+}
+.content-wrapper .contract-tb {
+  width: 100%;
+  table-layout: fixed;
+}
+.content-wrapper .contract-tb td {
+  text-align: center;
+}
+.content-wrapper .type {
+  margin-right: 20px;
+}
+.content-wrapper .audit-tb,
+.content-wrapper .info-tb,
+.content-wrapper .basic-tb,
+.content-wrapper .bank-tb {
+  width: 100%;
+  table-layout: fixed;
+}
+.content-wrapper .audit-tb td.wd20,
+.content-wrapper .info-tb td.wd20,
+.content-wrapper .basic-tb td.wd20,
+.content-wrapper .bank-tb td.wd20 {
+  width: 20%;
+}
+.content-wrapper .audit-tb .value,
+.content-wrapper .info-tb .value,
+.content-wrapper .basic-tb .value,
+.content-wrapper .bank-tb .value {
+  position: relative;
+}
+.content-wrapper .audit-tb .value input.smalltext,
+.content-wrapper .info-tb .value input.smalltext,
+.content-wrapper .basic-tb .value input.smalltext,
+.content-wrapper .bank-tb .value input.smalltext {
+  height: 20px;
+  width: 70px;
+}
+.content-wrapper .info-tb .w25 {
+  width: 25%;
+}
+.content-wrapper .info-tb .hright {
+  text-align: right;
+}
+.content-wrapper .bank-tb {
+  margin-top: 10px;
+}
+.content-wrapper .bank-tb .name {
+  width: 30%;
+  text-align: right;
+}
+.content-wrapper .relative {
+  position: relative;
+}
+.content-wrapper .qx-list {
+  margin-top: 20px;
+}
+.content-wrapper .qx-list .qx-tb {
+  width: 100%;
+}
+.content-wrapper .qx-list .qx-tb td {
+  text-align: center;
+}
+.content-wrapper .qx-list .qx-tb .discountText {
+  text-align: left;
+}
+.content-wrapper .banklist-wrapper {
+  margin-top: 20px;
+}
+.content-wrapper .banklist-wrapper .banklist {
+  width: 100%;
+}
+.content-wrapper .banklist-wrapper .banklist td {
+  text-align: center;
+}
+.content-wrapper .date {
+  display: inline-block;
+  vertical-align: middle;
+}
+.content-wrapper .add-on {
+  height: 30px;
+}

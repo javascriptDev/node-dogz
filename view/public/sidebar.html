@@ -1,0 +1,16 @@
+<% if (locals.sidebar) { %>
+<section class="sidebar">
+    <nav>
+        <% for(var i = 0; i < sidebar.length; i++) {%>
+            <ul>
+                <li><h4><%= sidebar[i].cate %></h4></li>
+                <% if (sidebar[i].list ) { %>
+                <% for(var j = 0; j < sidebar[i].list.length; j++) {%>
+                <li <% if (sidebar[i].list[j].active || sidebar[i].list[j].name == h_title) { %>class="active"<% } %> ><a href="<%=sidebar[i].list[j].url %>"><%=sidebar[i].list[j].name %></a></li>
+                <% } %>
+                <% } %>
+            </ul>
+        <% } %>
+    </nav>
+</section>
+<% } %>

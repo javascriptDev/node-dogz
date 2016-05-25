@@ -1,0 +1,20 @@
+
+<script type="text/javascript" src="<%=jsServerAddr%>lib/jq.js"></script>
+<%for(var i in js){%>
+	<% if(js[i].indexOf('http://')!=-1){%>
+		<script type="text/javascript" src="<%=js[i]%>"></script>
+	<%}else{%>
+		
+	<%}%>
+<%}%>
+<%if(deps){%>
+	<script type="text/javascript">
+	    var pageConfig = JSON.parse('<%- deps%>');
+	</script>
+<%}%>
+<script type="text/javascript" src="<%=jsServerAddr%>lib/trunk.js"></script>
+<%if(enter){%>
+	<script type="text/javascript">
+		require("<%=enter%>");
+	</script>
+<%}%>

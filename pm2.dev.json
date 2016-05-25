@@ -1,0 +1,53 @@
+{
+ /**
+   * This is a sample configuration file for PM2
+   */
+
+  /**
+   * Here we declare the apps that must be managed by PM2
+   * All options are listed here:
+   * https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md#json-app-declaration
+   *
+   */
+  "apps" : [{
+    "name"               : "web",
+    "script"             : "./bin/www.js",
+    //log
+    "error_file"      : "./logs/err/err.log",
+    "out_file"        : "./logs/console/console.log",
+    "log_date_format" : "YYYY-MM-DD HH:mm Z",
+    "merge_logs"         : true,
+    "watch"              : false,
+
+    "env": {
+      "NODE_ENV"    : "dev",
+      "srvPorts"    : 8080,
+      "jsServerAddr": "http://localhost:8410/",
+      "cssServerAddr": "http://localhost:8410/",
+      "dns"         :[],
+      "comboAPI"    : "http://localhost:8080/service/com.a.b/testService/bb/?f=",
+      "base"        : "http://ms0.meituan.net/"
+    }
+  },{//static resource server
+    "name"       : "resource_server",
+    "script"     : "./bin/resServer.js",
+    "env" : {
+      //resource 服务器端口
+      "jsServerPort": "8410"
+    }
+  },{//static resource server
+    "name"       : "websocket server",
+    "script"     : "./websocket/socket.js",
+    "env" : {
+      //resource 服务器端口
+      "wsport": "8888"
+    }
+  },{//static resource server
+    "name"       : "redis publisher",
+    "script"     : "./websocket/publisher.js",
+    "env" : {
+      //resource 服务器端口
+      "pubport": "3000"
+    }
+  }]
+}

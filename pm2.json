@@ -1,0 +1,33 @@
+{
+ /**
+   * This is a sample configuration file for PM2
+   */
+
+  /**
+   * Here we declare the apps that must be managed by PM2
+   * All options are listed here:
+   * https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md#json-app-declaration
+   *
+   */
+  "apps" : [{
+    "name"               : "web",
+    "script"             : "./bin/www.js",
+    //log
+    "error_file"      : "/var/ws/logs/posmis/err.log",
+    "out_file"        : "/var/ws/logs/posmis/console.log",
+    "log_date_format" : "YYYY-MM-DD HH:mm Z",
+    "merge_logs"         : true,
+    "watch"              : false,
+
+    "env": {
+      "NODE_ENV"    : "staging",
+      "srvPorts"    : 8080,
+      "jsServerAddr": "",
+      "cssServerAddr": "",
+      "comboAPI"    : "",
+      "dns"         : [],
+      "base"        : ""
+      
+    }
+  }]
+}

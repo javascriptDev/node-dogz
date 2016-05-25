@@ -1,0 +1,62 @@
+@import '../public/base.less';
+@import 'cmp/button.less';
+@import 'cmp/form.less';
+@import 'cmp/pagination.less';
+@import 'cmp/dialog.less';
+
+.poslist-wrapper{
+	margin-left: 20px;
+
+	.poslist-tb{
+		margin-top: 10px;
+		width: 100%;
+
+		th{
+			padding:10px 0;
+		}
+
+		td,th{
+			text-align: center;
+			a:hover{
+				color: #2bb8aa;
+			}
+			.install-btn{
+				padding-right: 5px;
+			}
+		}
+	}
+}
+
+.content-wrapper{
+
+	// 弹层
+	.modal{
+		font-size: 14px;
+		color: #666;
+		.dialog-body-title{
+			width: 120px;
+			float: left;
+			text-align: right;
+			margin-bottom: 10px;
+		}
+		.dialog-body-content{
+			float: left;
+			margin-left: 20px;
+			input{
+				height: 28px;
+				padding: 2px 5px;
+			}
+		}
+		.wrong-alert{
+			color: red;
+		}
+		.dialog-promp{
+			padding: 20px 0;
+		}
+		.modal-footer{
+			.btn-primary{
+				background: #ff7000;
+			}
+		}
+	}
+}

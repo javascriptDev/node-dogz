@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title><%=h_title%></title>
+        <meta name="keywords" contnet="<%= h_keywords%>"></meta>
+        <meta name="description" contnet="<%= h_description%>"></meta>
+        <%for(var i = 0 ,len = dns.length; i < len ; i++){ %>
+            <link rel="dns-prefetch" href="<%= dns[i]%>" />
+        <%}%>
+		<script type="text/javascript">
+			var MTVars = {
+				jsServer:"<%=jsServerAddr%>",
+				env:"<%=env%>"
+			}
+	    </script>
+	    <% include css.html%>
+    </head>
+    <body>
+    	
+    	

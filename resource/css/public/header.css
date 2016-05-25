@@ -1,0 +1,30 @@
+.header-wrapper {
+  height: 67px;
+  line-height: 67px;
+  background: #23bfb1;
+  border-bottom: 3px solid #1db2a6;
+}
+.header-wrapper .header-content {
+  position: relative;
+  width: 980px;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 2;
+  zoom: 1;
+}
+.header-wrapper .header-content h1 {
+  margin: 0;
+  padding: 0;
+}
+.header-text {
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+.header-user {
+  position: absolute;
+  line-height: normal;
+  color: #fff;
+  right: 5px;
+  bottom: 10px;
+}
