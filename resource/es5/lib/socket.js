@@ -8,7 +8,9 @@
         this.heartBeatTimer = 0,
         this.hbDuration = 25*1000,
         this.eventType = '',
-        this.subEvent = {}
+        this.subEvent = {
+
+        }
     }
     WS.prototype = {
         connect :function(ip){
@@ -33,7 +35,8 @@
                 me.socket.__id = getCookie('sid');
 
                 me.emit('online', {
-                    msg : me.socket.__id + ' : online!',
+                    msg : me.socket.__id,
+                    from:me.socket.__id
                 });
 
 
@@ -42,6 +45,12 @@
             }
             
             websocket.onclose = function (evt){
+                 
+                 me.emit('offline', {
+                    msg : me.socket.__id,
+                    from : me.socket.__id
+                 });
+
                 console.log('连接关闭，正在重连。。。');
 
                 me.tryTime--;
@@ -52,9 +61,12 @@
             
             websocket.onmessage = function (evt) {
                 evt = JSON.parse(evt.data);
-                var type = evt.mtype,msg = evt.msg,handler = me.subEvent[type];
+                var type = evt.mtype,msg = evt.msg,from = evt.from,handler = me.subEvent[type];
                  
-                typeof handler == 'function' && handler(msg);
+                typeof handler == 'function' && handler({
+                    msg : msg,
+                    from : from
+                });
 
             };
             
@@ -77,7 +89,8 @@
         },
         on:function(eventname,handler){
             if(this.subEvent[eventname])
-                console.log('this eventName ' + eventname + 'is existed~ please try another..');
+                console.log('this eventName ' + eventname + 'is existed~ will replace it.');
+            
             this.subEvent[eventname] = handler;
         },
         un:function(eventname){
@@ -89,9 +102,10 @@
             var to      = data.to ? '&to='+ data.to :'',
                 group   = data.group ? '&group=' + data.group : '',
                 msg     = 'msg='+ data.msg || '',
-                mtype   = (eventname || this.eventType) ? '&mtype=' + eventname : ''
+                mtype   = (eventname || this.eventType) ? '&mtype=' + eventname : '',
+                from    = '&from='+this.socket.__id
 
-            img.src = [this.emitServer,'?',msg,to,group,mtype].join('')
+            img.src = [this.emitServer,'?',msg,to,group,mtype,from].join('')
         },
         setEventType : function(type){
             this.eventType = type;

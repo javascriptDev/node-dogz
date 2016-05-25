@@ -30,7 +30,7 @@ module.exports = function(){
 	let sysRender = app.context.render;
 	let defaultCfg = {
 			js 					: [],
-			css 				: [`css/lib/bootstrap.min.css`],
+			css 				: [],
 			h_description 		: 'des',
 			h_keywords			: 'kw',
 			h_title				: '',

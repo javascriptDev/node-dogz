@@ -26,10 +26,10 @@ const server    = http.createServer((req, res) => {
         msg       = query.msg,
         to        = query.to || '',
         eventType = query.type,
-        mtype     = query.mtype;
+        mtype     = query.mtype,
+        from      = query.from;
 
-        console.log(query);
-
+        
     if(!msg){return;}
 
     if(group){//组播
@@ -40,14 +40,16 @@ const server    = http.createServer((req, res) => {
             publisher.publish(`${serverID}#${eventType || "text/plain"}`, JSON.stringify({
                 to    : [to],
                 msg   : msg,
-                mtype : mtype
+                mtype : mtype,
+                from  : from
             })); 
             res.end('published');
         })
     }else{//广播
         publisher.publish("broadcast", JSON.stringify({
             msg   : msg,
-            mtype : mtype
+            mtype : mtype,
+            from  : from
         }));
         res.end('published');
     } 
